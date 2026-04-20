@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+
+  /* 🌈 Pastel Background */
+  background: linear-gradient(135deg, #dbeafe, #fce7f3, #dcfce7);
+}
+
+/* MAIN CONTAINER */
+.container {
+  width: 95%;
+  margin: 20px auto;
+}
+
+/* TITLE */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* 🧱 MAIN LAYOUT (LEFT + RIGHT) */
+.main {
+  display: flex;
+  gap: 20px;
+}
+
+/* LEFT SIDE */
+.left {
+  width: 45%;
+}
+
+/* RIGHT SIDE */
+.right {
+  width: 55%;
+}
+
+/* CARD DESIGN */
+.card {
+  background: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+/* ✨ HOVER EFFECT */
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* INPUTS */
+input, select {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+/* BUTTONS */
+button {
+  background: #16a34a;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  margin: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #15803d;
+  transform: scale(1.05);
+}
+
+/* CAMERA */
+.camera-box {
+  background: black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+}
+
+#preview {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+/* BUTTON GROUP */
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* RESULT */
+#result {
+  margin-top: 10px;
+}
+
+/* RESULT CARD */
+.result-card {
+  background: #ecfdf5;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: left;
+  border-left: 5px solid #16a34a;
+}
+
+/* LISTS */
+ul, ol {
+  text-align: left;
+}
+
+/* GUIDELINES */
+.guidelines {
+  display: flex;
+  gap: 10px;
+}
+
+.dos, .donts {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.dos {
+  background: #dcfce7;
+}
+
+.donts {
+  background: #fee2e2;
+}
+
+.dos h4 { color: green; }
+.donts h4 { color: red; }
+
+/* 📍 CENTERS */
+#centers li {
+  background: #ecfdf5;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    width: 100%;
+  }
+}

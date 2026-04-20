@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Based Smart Waste Detection and Recycling Assistant</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="container">
+  <h1>♻️ AI Based Smart Waste Detection and Recycling Assistant</h1>
+
+  <div class="main">
+
+    <!-- LEFT -->
+    <div class="left">
+
+      <div class="card">
+        <h3>🔍 Enter Item</h3>
+        <input id="textInput" placeholder="Enter item">
+        <button onclick="detectText()">Detect</button>
+      </div>
+
+      <div class="card">
+        <h3>📁 Upload Image</h3>
+        <form id="uploadForm">
+          <input type="file" id="imageInput">
+          <button type="submit">Classify</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>📷 Camera</h3>
+        <div class="camera-box">
+          <video id="video" autoplay></video>
+          <img id="preview">
+        </div>
+
+        <div class="btn-group">
+          <button onclick="startCamera()">▶</button>
+          <button onclick="stopCamera()">⏹</button>
+          <button onclick="capture()">📸</button>
+          <button onclick="detect()">🔍</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>📍 Select Location</h3>
+        <select id="district" onchange="showCenters()">
+
+          <option value="">-- Select District --</option>
+
+          <!-- HYDERABAD -->
+          <option value="Hyderabad">Hyderabad</option>
+          <option value="Madhapur">Madhapur</option>
+          <option value="Gachibowli">Gachibowli</option>
+          <option value="Kukatpally">Kukatpally</option>
+          <option value="Ameerpet">Ameerpet</option>
+          <option value="BanjaraHills">Banjara Hills</option>
+          <option value="JubileeHills">Jubilee Hills</option>
+          <option value="Dilsukhnagar">Dilsukhnagar</option>
+          <option value="LBnagar">LB Nagar</option>
+          <option value="Uppal">Uppal</option>
+          <option value="Miyapur">Miyapur</option>
+          <option value="Begumpet">Begumpet</option>
+          <option value="Tarnaka">Tarnaka</option>
+          <option value="Mehdipatnam">Mehdipatnam</option>
+          <option value="Secunderabad">Secunderabad</option>
+
+          <!-- TELANGANA -->
+          <option value="Warangal">Warangal</option>
+          <option value="Karimnagar">Karimnagar</option>
+          <option value="Nizamabad">Nizamabad</option>
+          <option value="Khammam">Khammam</option>
+          <option value="Mahbubnagar">Mahbubnagar</option>
+          <option value="Adilabad">Adilabad</option>
+          <option value="Nalgonda">Nalgonda</option>
+          <option value="Suryapet">Suryapet</option>
+          <option value="Siddipet">Siddipet</option>
+          <option value="Medak">Medak</option>
+          <option value="Sangareddy">Sangareddy</option>
+          <option value="Vikarabad">Vikarabad</option>
+          <option value="Kamareddy">Kamareddy</option>
+          <option value="Jagitial">Jagitial</option>
+          <option value="Mancherial">Mancherial</option>
+          <option value="Yadadri">Yadadri</option>
+
+        </select>
+      </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+
+      <div id="result" class="card"></div>
+
+      <div class="card">
+        <h3>♻️ Recycling Centers</h3>
+        <ul id="centers"></ul>
+      </div>
+
+      <div class="card">
+        <h3>📘 Guidelines</h3>
+
+        <div class="guidelines">
+          <div class="dos">
+            <h4>✅ Do's</h4>
+            <ul>
+              <li>Clean items before recycling</li>
+              <li>Separate waste properly</li>
+              <li>Use correct bins</li>
+            </ul>
+          </div>
+
+          <div class="donts">
+            <h4>❌ Don'ts</h4>
+            <ul>
+              <li>Don't mix waste</li>
+              <li>Don't recycle dirty items</li>
+              <li>Don't throw batteries</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
